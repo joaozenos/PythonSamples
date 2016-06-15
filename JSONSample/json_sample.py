@@ -1,22 +1,22 @@
 #flake8:noqa
 import json
-# -- read -- 
-
 
 stats = {'players':[]}
 stats_2 = {}
 
 def new_player_list(identifier,name,wins,loses):
 	global stats
+
 	player = {'id':identifier, 'name':name, 'wins':wins, 'loses':loses}
 	stats['players'].append(player)
 
-def new_player(identifier,name,wins,loses):
+def new_player_dict(identifier,name,wins,loses):
 	global stats_2
+
 	new_player_dict = {'name':name, 'wins':wins, 'loses':loses}
 	stats_2[identifier] = new_player_dict
 
-#observe the behavior of adding 2 guys with same id using list and just dictionaries.
+#Observe the behavior of adding 2 guys with same id using list and just dictionaries.
 
 new_player_list(10030,'skyr',10,5)
 new_player_list(10030,'nooblet',10,5)
